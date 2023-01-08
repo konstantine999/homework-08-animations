@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #a2000a;
+    min-height: 100vh;
+}
+.container {
+    width: 100%;
+}
+.christmas-tree {
+    display: block;
+    height: 600px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+h1 {
+    text-align: center;
+    color: rgb(255, 234, 234);
+}
+.santa-claus {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 20px;
+    animation-duration: 5s;
+    animation: santa 15s linear infinite;
+    z-index: 1;
+}
+@keyframes santa {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+.snow {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./Photos/snow-1.png), url(./Photos/snow-2.png), url(./Photos/snow-3.png);
+    animation: snow-flake 15s linear infinite;
+}
+@keyframes snow-flake{
+    from {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    to {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+.gift {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    top: 30px;
+    left: 48%;
+    opacity: 0;
+    animation: gift 6s 6s linear ;
+}
+@keyframes gift {
+    0% {
+        top: 130px;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        top: 400px;
+        opacity: 1;
+    }
+}
+.Ho-Ho-Ho {
+    background-color: white;
+    padding: 20px 20px;
+    position: absolute;
+    border-radius: 50%;
+    top: 30px;
+    left: 45%;
+    opacity: 0;
+    animation: HoHo 15s linear infinite;
+}
+.Ho-Ho-Ho p {
+    color: #800c14;
+    font-weight: bold;
+    font-size: 16px;
+}
+@keyframes HoHo {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+    44% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 1;
+    }
+}
+.house {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 0;
+    left: 40%;
+    opacity: 1;
+
+}
